@@ -8,22 +8,22 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("helloBean")
+@Component("helloBeanCons")
 @Scope("singleton")
-public class HelloBean {
-	@Value("어노테이션")
+public class HelloBeanCons {
 	String name;
 	
-	@Autowired
-	@Qualifier("stringPrinter")
 	PrinterBean printer;
 	
 	List<String> names;
 
-	public HelloBean() {
-		System.out.println(this.getClass().getName() + " Default Constructor Called..");
+	@Autowired
+	public HelloBeanCons(@Value("어노테이션생성자") String name, 
+			@Qualifier("consolePrinter") PrinterBean printer) {
+		System.out.println(this.getClass().getName() + " Overloading Constructor Called..");
+		this.name = name;
+		this.printer = printer;
 	}
-
 
 	public List<String> getNames() {
 		return this.names;
