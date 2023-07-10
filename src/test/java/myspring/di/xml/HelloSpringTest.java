@@ -20,5 +20,6 @@ public class HelloSpringTest {
 	public void helloBean() {
 		System.out.println(hello.sayHello());
 		assertEquals("Hello 생성자", hello.sayHello());
+		hello.print();
 	}
 }
