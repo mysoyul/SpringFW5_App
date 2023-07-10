@@ -19,7 +19,10 @@ public class HelloConfig {
 	
 	@Bean
 	public Hello hello() {
-		
+		Hello hello = new Hello();
+		hello.setName(env.getProperty("myName2"));
+		hello.setPrinter(strPrinter());
+		return hello;
 	}
 	
 	
