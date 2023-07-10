@@ -2,6 +2,9 @@ package myspring.di.annot;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.annotation.Resource;
+
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +25,15 @@ class HelloBeanTest {
 	@Qualifier("stringPrinter")
 	PrinterBean printer;
 	
+	@Resource(name="helloBeanCons")
+	HelloBeanCons helloCons;
+	
 	@Test
+	void helloBeanCons() {
+		System.out.println(helloCons.sayHello());
+	}
+	
+	@Test @Disabled
 	void helloBean() {
 		System.out.println(hello.sayHello());
 		assertEquals(hello.sayHello(), "Hello 어노테이션");
