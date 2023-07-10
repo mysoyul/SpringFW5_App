@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component("helloBean")
 @Scope("singleton")
 public class HelloBean {
-	@Value("어노테이션")
+	@Value("${myName}")
 	String name;
 	
 	@Autowired

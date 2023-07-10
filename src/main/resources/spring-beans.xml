@@ -5,6 +5,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- values.properties 설정파일 위치 설정 -->
+	<context:property-placeholder location="classpath:values.properties"/>
+	
 	<!-- Auto Scanning을 사용한 Bean 등록 설정 -->
 	<context:component-scan base-package="myspring.di.annot" />
 	
