@@ -12,12 +12,12 @@ class HelloJunitTest {
 	
 	@BeforeEach
 	public void setup() {
+		//1. Container 객체생성하기
 		factory = new GenericXmlApplicationContext("classpath:spring-beans.xml");		
 	}
 
 	@Test
 	void helloBean() {
-		//1. Container 객체생성하기
 		//2. Container에게 Bean을 요청하기
 		Hello hello = (Hello)factory.getBean("hello");
 		Hello hello2 = factory.getBean("hello", Hello.class);
