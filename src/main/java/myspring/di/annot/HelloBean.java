@@ -2,6 +2,8 @@ package myspring.di.annot;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,8 +16,9 @@ public class HelloBean {
 	@Value("${myName}")
 	String name;
 	
-	@Autowired
-	@Qualifier("stringPrinter")
+//	@Autowired
+//	@Qualifier("stringPrinter")
+	@Resource(name="${printeBeanId}")
 	PrinterBean printer;
 	
 	List<String> names;

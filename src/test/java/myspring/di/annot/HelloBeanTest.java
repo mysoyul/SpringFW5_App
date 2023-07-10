@@ -33,11 +33,13 @@ class HelloBeanTest {
 		System.out.println(helloCons.sayHello());
 	}
 	
-	@Test @Disabled
+	@Test //@Disabled
 	void helloBean() {
 		System.out.println(hello.sayHello());
-		assertEquals(hello.sayHello(), "Hello 어노테이션");
+		assertEquals("Hello 어노테이션", hello.sayHello());
 		assertSame(hello, hello2);
+		hello.print();
+		assertEquals("Hello 어노테이션", printer.toString());
 	}
 
 }
