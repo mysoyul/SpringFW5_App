@@ -16,6 +16,8 @@ replay_pid*
 .settings/
 bin/
 tmp/
+target/
+.springBeans
 .metadata
 .classpath
 .project

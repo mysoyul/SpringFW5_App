@@ -2,17 +2,22 @@ package myspring.di.xml;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 class HelloJunitTest {
+	BeanFactory factory;
+	
+	@BeforeEach
+	public void setup() {
+		factory = new GenericXmlApplicationContext("classpath:spring-beans.xml");		
+	}
 
 	@Test
 	void helloBean() {
 		//1. Container 객체생성하기
-		BeanFactory factory = 
-				new GenericXmlApplicationContext("classpath:spring-beans.xml");
 		//2. Container에게 Bean을 요청하기
 		Hello hello = (Hello)factory.getBean("hello");
 		Hello hello2 = factory.getBean("hello", Hello.class);
