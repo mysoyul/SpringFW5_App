@@ -36,6 +36,4 @@
 		p:password="${db.password}"
 	 />
 	
-	<!-- values.properties 설정파일 위치 설정 -->
-	<context:property-placeholder location="classpath:values.properties"/>
 </beans>
