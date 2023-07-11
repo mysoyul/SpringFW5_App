@@ -3,9 +3,36 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Transaction Advice 설정 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true"/>
+			
+<!-- 			<tx:method name="deleteUser" propagation="NOT_SUPPORTED"/> -->
+<!-- 			<tx:method name="delete" propagation="MANDATORY"/> -->
+			
+			<!--
+				Not Supported => Mandatory
+				No existing transaction found for transaction marked with propagation 'mandatory'
+			-->
+<!-- 			<tx:method name="updateUser" propagation="NOT_SUPPORTED"/> -->
+			<tx:method name="updateUser" propagation="REQUIRED" />
+			<tx:method name="update" propagation="MANDATORY" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- Transaction AOP 설정 -->
+	<aop:config>
+		<aop:pointcut expression="execution(public * myspring.user..*(..))" id="txPointCut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
+	</aop:config>
+	
 
 	<!-- @Aspect 활성화 설정 -->
 	<aop:aspectj-autoproxy />

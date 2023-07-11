@@ -39,7 +39,7 @@ public class MyBatisTest {
 	@Autowired
 	StudentMapper studentMapper;
 	
-	@Test //@Disabled
+	@Test @Disabled
 	void student() {
 		List<StudentVO> stuList = 
 				studentMapper.selectStudentCourseStatus();
@@ -48,10 +48,14 @@ public class MyBatisTest {
 		stuList.forEach(System.out::println);
 	}
 	
-	@Test
+	@Test //@Disabled
 	void service() {
 		UserVO user = userService.getUser("gildong");
 		System.out.println(user);
+		
+		user.setCity("경기");
+		userService.updateUser(user);
+		
 	}
 	
 	@Test @Disabled
@@ -75,6 +79,9 @@ public class MyBatisTest {
 			DatabaseMetaData metaData = connection.getMetaData();
 			System.out.println("DB URL = " + metaData.getURL());
 			System.out.println("DB Username = " + metaData.getUserName());
+			System.out.println("Tx 지원 여부 " + metaData.supportsTransactions());
+			System.out.println("Tx level " + metaData.supportsTransactionIsolationLevel(Connection.TRANSACTION_READ_UNCOMMITTED));
+			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
