@@ -28,7 +28,7 @@ public class MyBatisTest {
 	void user_sql() {
 		UserVO user = 
 				sqlSession.selectOne("userNS.selectUserById", "dooly");
-		
+		System.out.println(user);
 	}
 	
 	@Test
