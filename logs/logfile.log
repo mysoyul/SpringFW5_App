@@ -81,3 +81,44 @@
 2023-07-11 13:21:31 753 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==> Parameters: gildong(String)
 2023-07-11 13:21:31 761 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - <==      Total: 1
 2023-07-11 13:21:31 762 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40e4ea87]
+2023-07-11 14:46:42 742 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 14:46:42 745 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 14:46:43 608 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 14:46:44 304 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 14:46:44 304 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 14:46:44 403 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 14:46:44 936 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 14:46:44 936 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 14:46:44 992 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 14:46:45 272 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 14:46:45 273 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 14:46:45 319 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 14:46:45 631 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 14:46:45 632 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 14:46:45 696 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 14:47:25 390 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 14:47:25 392 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 14:47:26 505 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 14:47:27 173 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2023-07-11 14:47:27 186 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13cda7c9] was not registered for synchronization because synchronization is not active
+2023-07-11 14:47:27 493 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@461448225 wrapping org.mariadb.jdbc.MariaDbConnection@5d28bcd5] will not be managed by Spring
+2023-07-11 14:47:27 505 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==>  Preparing: select * from users where userid=?
+2023-07-11 14:47:27 554 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==> Parameters: gildong(String)
+2023-07-11 14:47:27 593 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - <==      Total: 1
+2023-07-11 14:47:27 615 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13cda7c9]
+2023-07-11 15:03:16 800 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 15:03:16 810 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 15:03:18 822 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 15:03:21 236 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 15:03:21 240 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 15:03:22 561 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 15:05:29 565 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 15:05:29 568 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 15:05:30 371 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 15:05:31 004 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2023-07-11 15:05:31 026 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13cda7c9] was not registered for synchronization because synchronization is not active
+2023-07-11 15:05:31 274 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@461448225 wrapping org.mariadb.jdbc.MariaDbConnection@5d28bcd5] will not be managed by Spring
+2023-07-11 15:05:31 289 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==>  Preparing: select * from users where userid=?
+2023-07-11 15:05:31 345 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==> Parameters: dooly(String)
+2023-07-11 15:05:31 405 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - <==      Total: 1
+2023-07-11 15:05:31 426 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13cda7c9]
