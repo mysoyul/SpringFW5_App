@@ -3,6 +3,7 @@ package myspring.user;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -14,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import myspring.student.dao.mapper.StudentMapper;
+import myspring.student.vo.StudentVO;
 import myspring.user.dao.mapper.UserMapper;
 import myspring.user.service.UserService;
 import myspring.user.vo.UserVO;
@@ -32,6 +35,15 @@ public class MyBatisTest {
 	
 	@Autowired
 	UserService userService;
+	
+	@Autowired
+	StudentMapper studentMapper;
+	
+	@Test
+	void student() {
+		List<StudentVO> stuList = 
+				studentMapper.selectStudentCourseStatus();
+	}
 	
 	@Test
 	void service() {
