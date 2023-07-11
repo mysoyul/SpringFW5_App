@@ -10,6 +10,7 @@
 	
 	<!-- Auto Scanning을 사용한 Bean 등록 설정 -->
 	<context:component-scan base-package="myspring.di.annot" />
+	<context:component-scan base-package="myspring.user" />
 	
 	<!-- StringPrinter 클래스를 Bean으로 설정 -->
 	<bean id="strPrinter" class="myspring.di.xml.StringPrinter" />

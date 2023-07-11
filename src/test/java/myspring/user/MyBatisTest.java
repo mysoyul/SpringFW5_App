@@ -15,6 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import myspring.user.dao.mapper.UserMapper;
+import myspring.user.service.UserService;
 import myspring.user.vo.UserVO;
 
 @ExtendWith(SpringExtension.class)
@@ -28,6 +29,15 @@ public class MyBatisTest {
 	
 	@Autowired 
 	UserMapper userMapper;
+	
+	@Autowired
+	UserService userService;
+	
+	@Test
+	void service() {
+		UserVO user = userService.getUser("gildong");
+		System.out.println(user);
+	}
 	
 	@Test
 	void mapper() {
