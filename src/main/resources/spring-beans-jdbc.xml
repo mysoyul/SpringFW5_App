@@ -17,6 +17,11 @@
 		</property>
 	</bean>
 	
+	<!-- SqlSessionTemplate 설정 -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+   		<constructor-arg ref="sqlSessionFactory" />
+ 	</bean>
+ 	
 	<!-- HikariDataSource 설정 -->
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		p:jdbcUrl="${db.url}"
