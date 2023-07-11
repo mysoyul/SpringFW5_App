@@ -17,7 +17,10 @@
 	
 	<!-- Auto Scanning을 사용한 Bean 등록 설정 -->
 	<context:component-scan base-package="myspring.**.annot" />
-	<context:component-scan base-package="myspring.user,myspring.student" />
+	<context:component-scan base-package="myspring.user,myspring.student">
+		<context:exclude-filter type="annotation" 
+			expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
 	
 	<!-- StringPrinter 클래스를 Bean으로 설정 -->
 	<bean id="strPrinter" class="myspring.di.xml.StringPrinter" />
