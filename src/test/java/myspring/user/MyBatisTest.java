@@ -53,7 +53,7 @@ public class MyBatisTest {
 		UserVO user = userService.getUser("gildong");
 		System.out.println(user);
 		
-		user.setCity("경기");
+		user.setCity("서울");
 		userService.updateUser(user);
 		
 	}

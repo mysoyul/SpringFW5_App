@@ -166,3 +166,82 @@
 2023-07-11 16:29:54 957 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
 2023-07-11 16:29:54 959 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
 2023-07-11 16:29:56 189 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 16:41:04 374 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 16:41:04 377 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 16:41:05 499 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 16:41:06 720 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.service.UserServiceImpl
+2023-07-11 16:41:06 721 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ getUser ] 메서드 실행 전처리 수행
+2023-07-11 16:41:06 722 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ getUser ] 아규먼트 gildong
+2023-07-11 16:41:06 723 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.dao.UserDaoImplMapper
+2023-07-11 16:41:06 724 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ read ] 메서드 실행 전처리 수행
+2023-07-11 16:41:06 724 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ read ] 아규먼트 gildong
+2023-07-11 16:41:06 725 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = com.sun.proxy.$Proxy55
+2023-07-11 16:41:06 726 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ selectUserById ] 메서드 실행 전처리 수행
+2023-07-11 16:41:06 726 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ selectUserById ] 아규먼트 gildong
+2023-07-11 16:41:06 745 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2023-07-11 16:41:06 786 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:41:06 821 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@518167684 wrapping org.mariadb.jdbc.MariaDbConnection@7c8326a4] will be managed by Spring
+2023-07-11 16:41:06 841 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==>  Preparing: select * from users where userid=?
+2023-07-11 16:41:06 927 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==> Parameters: gildong(String)
+2023-07-11 16:41:07 087 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - <==      Total: 1
+2023-07-11 16:41:07 115 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:41:07 118 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterReturing [ getUser ] 메서드 실행 후처리 수행
+2023-07-11 16:41:07 119 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterReturing [ getUser ] 리턴값=UserVO [id=1, userId=gildong, name=홍길동, gender=남, city=서울]
+2023-07-11 16:41:07 119 [main] DEBUG myspring.aop.annot.LoggingAspect - @After [ getUser ] 메서드 실행 완료
+2023-07-11 16:41:07 121 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:41:07 122 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:41:07 126 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:41:07 160 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.service.UserServiceImpl
+2023-07-11 16:41:07 160 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ updateUser ] 메서드 실행 전처리 수행
+2023-07-11 16:41:07 160 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ updateUser ] 아규먼트 UserVO [id=1, userId=gildong, name=홍길동, gender=남, city=경기]
+2023-07-11 16:41:07 161 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.dao.UserDaoImplMapper
+2023-07-11 16:41:07 161 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ update ] 메서드 실행 전처리 수행
+2023-07-11 16:41:07 161 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ update ] 아규먼트 UserVO [id=1, userId=gildong, name=홍길동, gender=남, city=경기]
+2023-07-11 16:41:07 163 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = com.sun.proxy.$Proxy55
+2023-07-11 16:41:07 163 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ updateUser ] 메서드 실행 전처리 수행
+2023-07-11 16:41:07 163 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ updateUser ] 아규먼트 UserVO [id=1, userId=gildong, name=홍길동, gender=남, city=경기]
+2023-07-11 16:41:07 164 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2023-07-11 16:41:07 164 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4525d1d3]
+2023-07-11 16:41:07 165 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@518692141 wrapping org.mariadb.jdbc.MariaDbConnection@7c8326a4] will be managed by Spring
+2023-07-11 16:41:07 165 [main] DEBUG myspring.user.dao.mapper.UserMapper.updateUser - ==>  Preparing: update users set name = ?, gender = ?, city = ? where userid = ?
+2023-07-11 16:41:07 166 [main] DEBUG myspring.user.dao.mapper.UserMapper.updateUser - ==> Parameters: 홍길동(String), 남(String), 경기(String), gildong(String)
+2023-07-11 16:41:07 170 [main] DEBUG myspring.user.dao.mapper.UserMapper.updateUser - <==    Updates: 1
+2023-07-11 16:41:07 171 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4525d1d3]
+2023-07-11 16:41:07 171 [main] DEBUG myspring.aop.annot.LoggingAspect - @After [ updateUser ] 메서드 실행 완료
+2023-07-11 16:41:07 171 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterReturing [ updateUser ] 메서드 실행 후처리 수행
+2023-07-11 16:41:07 171 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterReturing [ updateUser ] 리턴값=null
+2023-07-11 16:41:07 172 [main] DEBUG myspring.aop.annot.LoggingAspect - @After [ updateUser ] 메서드 실행 완료
+2023-07-11 16:41:07 172 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4525d1d3]
+2023-07-11 16:41:07 173 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4525d1d3]
+2023-07-11 16:41:07 173 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4525d1d3]
+2023-07-11 16:42:46 791 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\student\dao\mapper\StudentMapper.class]
+2023-07-11 16:42:46 817 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [C:\sts3.9-bundle\workspace\MySpringFW\target\classes\myspring\user\dao\mapper\UserMapper.class]
+2023-07-11 16:42:49 216 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2023-07-11 16:42:51 019 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.service.UserServiceImpl
+2023-07-11 16:42:51 019 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ getUser ] 메서드 실행 전처리 수행
+2023-07-11 16:42:51 019 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ getUser ] 아규먼트 gildong
+2023-07-11 16:42:51 021 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.dao.UserDaoImplMapper
+2023-07-11 16:42:51 022 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ read ] 메서드 실행 전처리 수행
+2023-07-11 16:42:51 022 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ read ] 아규먼트 gildong
+2023-07-11 16:42:51 024 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = com.sun.proxy.$Proxy55
+2023-07-11 16:42:51 025 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ selectUserById ] 메서드 실행 전처리 수행
+2023-07-11 16:42:51 026 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ selectUserById ] 아규먼트 gildong
+2023-07-11 16:42:51 046 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2023-07-11 16:42:51 059 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:42:51 096 [main] DEBUG org.mybatis.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@518167684 wrapping org.mariadb.jdbc.MariaDbConnection@7c8326a4] will be managed by Spring
+2023-07-11 16:42:51 109 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==>  Preparing: select * from users where userid=?
+2023-07-11 16:42:51 212 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - ==> Parameters: gildong(String)
+2023-07-11 16:42:51 460 [main] DEBUG myspring.user.dao.mapper.UserMapper.selectUserById - <==      Total: 1
+2023-07-11 16:42:51 486 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:42:51 525 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterReturing [ getUser ] 메서드 실행 후처리 수행
+2023-07-11 16:42:51 526 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterReturing [ getUser ] 리턴값=UserVO [id=1, userId=gildong, name=홍길동, gender=남, city=경기]
+2023-07-11 16:42:51 527 [main] DEBUG myspring.aop.annot.LoggingAspect - @After [ getUser ] 메서드 실행 완료
+2023-07-11 16:42:51 530 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:42:51 531 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:42:51 531 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c2a69b4]
+2023-07-11 16:42:51 536 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before 타겟 객체 클래스명 = myspring.user.service.UserServiceImpl
+2023-07-11 16:42:51 537 [main] DEBUG myspring.aop.annot.LoggingAspect - >>>> @Before [ updateUser ] 메서드 실행 전처리 수행
+2023-07-11 16:42:51 537 [main] DEBUG myspring.aop.annot.LoggingAspect - @Before [ updateUser ] 아규먼트 UserVO [id=1, userId=gildong, name=홍길동, gender=남, city=서울]
+2023-07-11 16:42:51 541 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterThrowing [ updateUser ] 메서드 실행 중 예외 발생
+2023-07-11 16:42:51 542 [main] DEBUG myspring.aop.annot.LoggingAspect - @AfterThrowing [ updateUser ] 예외=No existing transaction found for transaction marked with propagation 'mandatory'
+2023-07-11 16:42:51 542 [main] DEBUG myspring.aop.annot.LoggingAspect - @After [ updateUser ] 메서드 실행 완료
