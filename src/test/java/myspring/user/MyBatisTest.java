@@ -1,5 +1,9 @@
 package myspring.user;
 
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
+
 import javax.sql.DataSource;
 
 import org.junit.jupiter.api.Test;
@@ -16,6 +20,14 @@ public class MyBatisTest {
 	
 	@Test
 	public void connection() {
-		
+		try {
+			Connection connection = dataSource.getConnection();
+			DatabaseMetaData metaData = connection.getMetaData();
+			System.out.println("DB URL = " + metaData.getURL());
+			System.out.println("DB Username = " + metaData.getUserName());
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 	}
 }
