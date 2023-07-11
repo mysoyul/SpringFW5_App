@@ -64,7 +64,9 @@ public class RestfulUserController {
 	public Boolean updateUser(@PathVariable("userId") String id, @RequestBody UserVO userInfo) {
 		UserVO user = userService.getUser(id);
 		if (user != null) {
-			userService.updateUser(userInfo);
+			user.setCity(userInfo.getCity());
+			user.setGender(userInfo.getGender());
+			userService.updateUser(user);
 			return Boolean.TRUE;
 		} else {	
 			return Boolean.FALSE;
