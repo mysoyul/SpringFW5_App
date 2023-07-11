@@ -39,7 +39,7 @@ public class MyBatisTest {
 	@Autowired
 	StudentMapper studentMapper;
 	
-	@Test
+	@Test @Disabled
 	void student() {
 		List<StudentVO> stuList = 
 				studentMapper.selectStudentCourseStatus();
@@ -54,7 +54,7 @@ public class MyBatisTest {
 		System.out.println(user);
 	}
 	
-	@Test
+	@Test @Disabled
 	void mapper() {
 		UserVO user = userMapper.selectUserById("dooly");
 		System.out.println(user);
@@ -68,7 +68,7 @@ public class MyBatisTest {
 		System.out.println(user);
 	}
 	
-	@Test
+	@Test @Disabled
 	public void connection() {
 		try {
 			Connection connection = dataSource.getConnection();

@@ -11,7 +11,8 @@
 	<!-- AOP Config 설정 -->
 	<aop:config>
 		<aop:aspect id="traceAspect" ref="performanceTraceAdvice">
-			<aop:around pointcut="execution(public * myspring.user..*(..)) || execution(public * myspring.student..*(..)))" method="trace" />
+			<aop:around pointcut="execution(public * myspring.user..*(..))" method="trace" />
+<!-- 	<aop:around pointcut="execution(public * myspring.user..*(..)) || execution(public * myspring.student..*(..)))" method="trace" /> -->
 		</aop:aspect>
 	</aop:config>
 
