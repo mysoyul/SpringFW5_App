@@ -15,9 +15,14 @@ import myspring.user.vo.UserVO;
 import myspring.user.vo.xml.UserVOXML;
 
 @RestController
-public class RestfulUserController {
-	@Autowired
-	private UserService userService;
+public class RestfulUserController {	
+	private final UserService userService;
+	
+	//Constructor Injection
+	public RestfulUserController(UserService userService) {
+		System.out.println(">>>> RestfulUserController 생성자 호출됨 ");
+		this.userService = userService;
+	}
 
 	@RequestMapping(value="/users",
 			                 method=RequestMethod.GET,produces = { "application/json"})
