@@ -43,6 +43,9 @@ public class MyBatisTest {
 	void student() {
 		List<StudentVO> stuList = 
 				studentMapper.selectStudentCourseStatus();
+		//forEach(Consumer) Consumer의 추상메서드 void accept(T t);
+		//stuList.forEach(stu -> System.out.println(stu));
+		stuList.forEach(System.out::println);
 	}
 	
 	@Test
