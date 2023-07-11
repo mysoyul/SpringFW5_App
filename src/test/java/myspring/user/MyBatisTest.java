@@ -39,7 +39,7 @@ public class MyBatisTest {
 	@Autowired
 	StudentMapper studentMapper;
 	
-	@Test @Disabled
+	@Test //@Disabled
 	void student() {
 		List<StudentVO> stuList = 
 				studentMapper.selectStudentCourseStatus();
